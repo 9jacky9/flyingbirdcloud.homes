@@ -1,0 +1,1261 @@
+/* ==========================================================================
+   飞鸟云 - 高阶新锐商务叙事流样式表 (Modern Enterprise Editorial)
+   特点：居中宽幅叙事、典雅深蓝与青绿双色调、多维故事轴、高呼吸感留白
+   ========================================================================== */
+
+:root {
+  --color-brand: #1E3A8A;
+  --color-brand-deep: #172554;
+  --color-teal: #0D9488;
+  --color-teal-light: #CCFBF1;
+  --color-text-title: #0F172A;
+  --color-text-body: #475569;
+  --color-bg-base: #F8FAFC;
+  --color-bg-alt: #F1F5F9;
+  --color-white: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-border-hover: #94A3B8;
+  --font-editorial: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --max-w-editorial: 1140px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-editorial);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 布局外框 */
+.editorial-wrap {
+  max-width: var(--max-w-editorial);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* 顶部商务导航 */
+.editorial-header {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.editorial-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+}
+
+.editorial-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.editorial-logo svg {
+  height: 42px;
+  width: auto;
+}
+
+.editorial-nav-toggle {
+  display: none;
+}
+
+.editorial-nav-container {
+  display: block;
+}
+
+.editorial-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.editorial-menu a {
+  text-decoration: none;
+  color: var(--color-text-body);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.editorial-menu a:hover {
+  color: var(--color-brand);
+}
+
+.editorial-nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* 商务按钮 */
+.ed-btn,
+a.ed-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.ed-btn-primary,
+a.ed-btn-primary,
+a.ed-btn-primary:link,
+a.ed-btn-primary:visited {
+  background-color: var(--color-brand) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--color-brand) !important;
+}
+
+.ed-btn-primary:hover,
+.ed-btn-primary:focus,
+.ed-btn-primary:active,
+a.ed-btn-primary:hover,
+a.ed-btn-primary:focus,
+a.ed-btn-primary:active {
+  background-color: var(--color-brand-deep) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-brand-deep) !important;
+  text-decoration: none !important;
+}
+
+.ed-btn-recommend,
+a.ed-btn-recommend,
+a.ed-btn-recommend:link,
+a.ed-btn-recommend:visited {
+  background-color: var(--color-teal-light) !important;
+  color: #0F766E !important;
+  border: 1px solid #99F6E4 !important;
+}
+
+.ed-btn-recommend:hover,
+.ed-btn-recommend:focus,
+.ed-btn-recommend:active,
+a.ed-btn-recommend:hover,
+a.ed-btn-recommend:focus,
+a.ed-btn-recommend:active {
+  background-color: #99F6E4 !important;
+  color: #0F766E !important;
+  text-decoration: none !important;
+}
+
+.ed-btn-outline,
+a.ed-btn-outline,
+a.ed-btn-outline:link,
+a.ed-btn-outline:visited {
+  background-color: var(--color-white) !important;
+  color: var(--color-brand) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+.ed-btn-outline:hover,
+.ed-btn-outline:focus,
+.ed-btn-outline:active,
+a.ed-btn-outline:hover,
+a.ed-btn-outline:focus,
+a.ed-btn-outline:active {
+  border-color: var(--color-brand) !important;
+  color: var(--color-brand) !important;
+  text-decoration: none !important;
+}
+
+/* 宽幅中心叙事 Hero */
+.editorial-hero {
+  padding: 88px 0 72px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(248, 250, 252, 0.82) 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.ed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-brand);
+  margin-bottom: 24px;
+}
+
+.ed-badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-teal);
+  border-radius: 50%;
+}
+
+.editorial-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-text-title);
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.editorial-hero-title span {
+  color: var(--color-brand);
+}
+
+.editorial-hero-lead {
+  font-size: 19px;
+  color: var(--color-text-body);
+  max-width: 720px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+
+.editorial-cta-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+/* 核心指标条 */
+.hero-metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+.metric-col {
+  text-align: center;
+  border-right: 1px solid var(--color-border);
+  padding: 0 16px;
+}
+
+.metric-col:last-child {
+  border-right: none;
+}
+
+.metric-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-brand);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.metric-desc {
+  font-size: 13px;
+  color: var(--color-text-body);
+}
+
+/* 章节通用 */
+.section-editorial {
+  padding: 96px 0;
+}
+
+.section-editorial-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sec-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-teal);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.sec-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-text-title);
+}
+
+/* 为何大家都在选择我们 (4 cards, 2x2 网格) */
+.story-grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.editorial-feature-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 36px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.25s ease;
+}
+
+.editorial-feature-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.06);
+}
+
+.duotone-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.duotone-icon-box svg {
+  width: 28px;
+  height: 28px;
+}
+
+.feature-info h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 8px;
+}
+
+.feature-info p {
+  font-size: 14px;
+  color: var(--color-text-body);
+  line-height: 1.65;
+}
+
+/* 多媒体与智能生产力 (3 cards 宽幅排列) */
+.media-editorial-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.media-ed-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: left;
+}
+
+.media-tag-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: var(--color-teal-light);
+  color: #0F766E;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.media-ed-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 10px;
+}
+
+.media-ed-card p {
+  font-size: 14px;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* 价格对比 (3 方案，水平高质感) */
+.pricing-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.pricing-ed-box {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pricing-ed-box.highlight {
+  border: 2px solid var(--color-brand);
+  box-shadow: 0 12px 36px -6px rgba(30, 58, 138, 0.12);
+}
+
+.pricing-flag {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-brand);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 12px;
+}
+
+.ed-plan-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text-title);
+  margin-bottom: 6px;
+}
+
+.ed-plan-sub {
+  font-size: 13px;
+  color: var(--color-text-body);
+  min-height: 38px;
+  margin-bottom: 24px;
+}
+
+.ed-price-line {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ed-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-title);
+}
+
+.ed-num {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--color-brand);
+  line-height: 1;
+}
+
+.ed-unit {
+  font-size: 14px;
+  color: var(--color-text-body);
+}
+
+.ed-checklist {
+  list-style: none;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.ed-check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-text-title);
+  padding: 8px 0;
+}
+
+.ed-bullet {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-teal);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* 口碑见证 (4 reviews, 2x2 瀑布感卡片) */
+.reviews-editorial-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.testimonial-box {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.testimonial-body {
+  font-size: 15px;
+  color: var(--color-text-title);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-initial {
+  width: 42px;
+  height: 42px;
+  background-color: #EFF6FF;
+  color: var(--color-brand);
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.author-meta h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-title);
+}
+
+.author-meta p {
+  font-size: 12px;
+  color: var(--color-text-body);
+}
+
+/* 常见接入 FAQ (3 items) */
+.faq-editorial-stack {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-card-ed {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 26px 30px;
+}
+
+.faq-q-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin-bottom: 10px;
+}
+
+.faq-a-body {
+  font-size: 14px;
+  color: var(--color-text-body);
+  line-height: 1.65;
+}
+
+/* 严格限定页脚：仅展示 4 个中文标题 */
+.editorial-footer {
+  background-color: #0F172A;
+  color: #CBD5E1;
+  padding: 56px 0 48px;
+  border-top: 1px solid #1E293B;
+}
+
+.ed-footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.ed-footer-nav a {
+  color: #E2E8F0;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.ed-footer-nav a:hover {
+  color: var(--color-teal);
+}
+
+.ed-footer-copy {
+  text-align: center;
+  font-size: 13px;
+  color: #64748B;
+}
+
+/* 独立子页面内容排版 */
+.ed-subpage-wrap {
+  min-height: 70vh;
+  padding: 64px 0 96px;
+  background-color: var(--color-white);
+}
+
+.ed-subpage-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.85;
+}
+
+.ed-back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.ed-subpage-inner h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--color-text-title);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.ed-subpage-inner h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-title);
+  margin: 32px 0 12px;
+}
+
+.ed-subpage-inner p {
+  font-size: 15px;
+  color: var(--color-text-body);
+  margin-bottom: 16px;
+}
+
+.ed-subpage-inner ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.ed-subpage-inner li {
+  margin-bottom: 8px;
+  color: var(--color-text-body);
+  font-size: 15px;
+}
+
+/* 响应式移动端适配 */
+@media (max-width: 768px) {
+  .editorial-hero-title {
+    font-size: 32px;
+  }
+
+  .hero-metrics-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .metric-col {
+    border-right: none;
+  }
+
+  .story-grid-2x2,
+  .media-editorial-row,
+  .pricing-editorial-grid,
+  .reviews-editorial-2x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-nav-bar {
+    height: 64px;
+    position: relative;
+  }
+
+  .editorial-nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-white);
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 12px;
+    order: 2;
+  }
+
+  .editorial-nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--color-brand);
+    transition: all 0.25s ease;
+    border-radius: 2px;
+  }
+
+  .editorial-nav-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .editorial-nav-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .editorial-nav-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .editorial-nav-container {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-border);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    z-index: 999;
+  }
+
+  .editorial-nav-container.is-open {
+    display: block;
+  }
+
+  .editorial-menu {
+    display: flex !important;
+    flex-direction: column;
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    gap: 0;
+    width: 100%;
+  }
+
+  .editorial-menu li {
+    width: 100%;
+  }
+
+  .editorial-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text-title);
+    border-bottom: 1px solid var(--color-border);
+    min-height: 48px;
+    width: 100%;
+  }
+
+  .editorial-menu li:last-child a {
+    border-bottom: none;
+  }
+
+  .editorial-menu li a:hover,
+  .editorial-menu li a:active {
+    background-color: var(--color-bg-alt);
+    color: var(--color-teal);
+  }
+
+  .editorial-nav-cta {
+    order: 3;
+  }
+
+  .editorial-nav-cta .ed-btn {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .editorial-cta-wrap {
+    flex-direction: column;
+  }
+
+  .editorial-cta-wrap .ed-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ed-footer-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   商务叙事流超链接增强与行业洞见扩展样式 (Enterprise Editorial Style)
+   ========================================================================== */
+a:not(.ed-btn) {
+  color: #0D9488;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:not(.ed-btn):visited {
+  color: #0D9488;
+}
+
+a:not(.ed-btn):hover, a:not(.ed-btn):active {
+  color: #0F766E;
+}
+
+/* 行业洞见文章列表排版 */
+.perspectives-hub-banner {
+  padding: 80px 0 48px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(248, 250, 252, 0.82) 100%);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.perspectives-tag {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.perspectives-main-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--color-text-title);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.perspectives-lead {
+  font-size: 17px;
+  color: var(--color-text-body);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.perspectives-content-section {
+  padding: 72px 0 100px;
+}
+
+.perspectives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.perspective-card-item {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.perspective-card-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px -4px rgba(15, 23, 42, 0.08);
+  border-color: var(--color-border-hover);
+}
+
+.perspective-category-pill {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 10px;
+  background-color: var(--color-teal-light);
+  color: #0F766E;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.perspective-item-title {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.perspective-item-title a {
+  color: var(--color-text-title);
+  text-decoration: none;
+}
+
+.perspective-item-title a:visited {
+  color: var(--color-text-title);
+}
+
+.perspective-item-title a:hover {
+  color: var(--color-brand);
+}
+
+.perspective-item-desc {
+  font-size: 14px;
+  color: var(--color-text-body);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.perspective-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* 详情文章排版 */
+.editorial-article-wrap {
+  padding: 72px 0 100px;
+  background-color: var(--color-white);
+}
+
+.editorial-article-container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.editorial-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-brand);
+  margin-bottom: 28px;
+}
+
+.editorial-article-head {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+}
+
+.editorial-article-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: var(--color-teal-light);
+  color: #0F766E;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.editorial-article-h1 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--color-text-title);
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.editorial-article-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.editorial-article-content {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.editorial-article-content h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--color-text-title);
+  margin: 44px 0 18px;
+  padding-left: 14px;
+  border-left: 4px solid var(--color-brand);
+  line-height: 1.35;
+}
+
+.editorial-article-content h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-brand);
+  margin: 30px 0 14px;
+  line-height: 1.45;
+}
+
+.editorial-article-content p {
+  margin-bottom: 22px;
+}
+
+.editorial-article-content ul, .editorial-article-content ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.editorial-article-content li {
+  margin-bottom: 10px;
+}
+
+.editorial-article-content blockquote {
+  background-color: var(--color-bg-base);
+  border-left: 4px solid var(--color-teal);
+  border-radius: 0 8px 8px 0;
+  padding: 18px 24px;
+  margin: 28px 0;
+  font-size: 15px;
+  color: var(--color-text-body);
+}
+
+/* 正文中超链接：商务高对比深青色，访问前后一致，不带默认蓝紫 */
+.editorial-article-content a {
+  color: #0D9488 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+
+.editorial-article-content a:visited {
+  color: #0D9488 !important;
+}
+
+.editorial-article-content a:hover, .editorial-article-content a:active {
+  color: #0F766E !important;
+}
+
+.editorial-author-box {
+  margin-top: 60px;
+  padding: 32px;
+  background-color: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.editorial-author-box h4 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-text-title);
+  margin-bottom: 8px;
+}
+
+.editorial-author-box p {
+  font-size: 14px;
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .perspectives-grid {
+    grid-template-columns: 1fr;
+  }
+  .perspectives-main-title {
+    font-size: 30px;
+  }
+  .editorial-article-h1 {
+    font-size: 26px;
+  }
+}
+
+/* ==========================================================================
+   全站生态 - 苍穹群鸟翱翔动态背景 (Ambient Soaring Bird Flock)
+   ========================================================================== */
+.flock-sky-ambient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.section-editorial,
+.editorial-footer,
+.article-detail-wrap,
+.info-page-wrap,
+.perspectives-hub-banner,
+.editorial-hero {
+  position: relative;
+  z-index: 1;
+}
+
+.ambient-flock-cluster {
+  position: absolute;
+  width: 220px;
+  height: 180px;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* V 字领航主雁阵 (较近层，深品牌蓝) */
+.flock-cluster-v {
+  top: 0;
+  left: 0;
+  fill: var(--color-brand);
+  opacity: 0.28;
+  animation: flyDiagonalV 26s linear infinite;
+  animation-delay: -6s;
+}
+
+.flock-bird {
+  position: absolute;
+  width: 44px;
+  height: 30px;
+}
+
+.flock-bird svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* V 字阵型相对坐标 */
+.b-lead { top: 0px; left: 88px; }
+.b-left-1 { top: 32px; left: 44px; }
+.b-right-1 { top: 32px; left: 132px; }
+.b-left-2 { top: 64px; left: 0px; }
+.b-right-2 { top: 64px; left: 176px; }
+
+/* 中距巡航组 (中层，青绿品牌色，略小) */
+.flock-cluster-mid {
+  top: 0;
+  left: 0;
+  fill: var(--color-teal);
+  opacity: 0.22;
+  transform-origin: center center;
+  animation: flyDiagonalMid 34s linear infinite;
+  animation-delay: -18s;
+}
+
+.b-mid-1 { top: 10px; left: 40px; transform: scale(0.68); }
+.b-mid-2 { top: 48px; left: 90px; transform: scale(0.62); }
+.b-mid-3 { top: 78px; left: 30px; transform: scale(0.65); }
+
+/* 远空高飞组 (远层，极高空微缩剪影) */
+.flock-cluster-far {
+  top: 0;
+  left: 0;
+  fill: var(--color-brand-deep);
+  opacity: 0.16;
+  animation: flyDiagonalFar 44s linear infinite;
+  animation-delay: -11s;
+}
+
+.b-far-1 { top: 20px; left: 60px; transform: scale(0.42); }
+.b-far-2 { top: 46px; left: 120px; transform: scale(0.38); }
+.b-far-3 { top: 70px; left: 20px; transform: scale(0.40); }
+
+/* 翅膀关节扇动关键帧 */
+.flock-wing-l {
+  transform-origin: 24px 13px;
+  animation: flockWingFlapL 0.72s ease-in-out infinite alternate;
+}
+
+.flock-wing-r {
+  transform-origin: 24px 13px;
+  animation: flockWingFlapR 0.72s ease-in-out infinite alternate;
+}
+
+/* 错峰扇翅延迟，使鸟群动作自然灵动 */
+.b-left-1 .flock-wing-l, .b-left-1 .flock-wing-r { animation-delay: -0.18s; }
+.b-right-1 .flock-wing-l, .b-right-1 .flock-wing-r { animation-delay: -0.32s; }
+.b-left-2 .flock-wing-l, .b-left-2 .flock-wing-r { animation-delay: -0.45s; }
+.b-right-2 .flock-wing-l, .b-right-2 .flock-wing-r { animation-delay: -0.22s; }
+.b-mid-1 .flock-wing-l, .b-mid-1 .flock-wing-r { animation-duration: 0.82s; animation-delay: -0.15s; }
+.b-mid-2 .flock-wing-l, .b-mid-2 .flock-wing-r { animation-duration: 0.88s; animation-delay: -0.4s; }
+.b-mid-3 .flock-wing-l, .b-mid-3 .flock-wing-r { animation-duration: 0.8s; animation-delay: -0.28s; }
+.b-far-1 .flock-wing-l, .b-far-1 .flock-wing-r { animation-duration: 0.95s; animation-delay: -0.1s; }
+.b-far-2 .flock-wing-l, .b-far-2 .flock-wing-r { animation-duration: 1.05s; animation-delay: -0.5s; }
+.b-far-3 .flock-wing-l, .b-far-3 .flock-wing-r { animation-duration: 0.98s; animation-delay: -0.35s; }
+
+@keyframes flockWingFlapL {
+  0% { transform: rotate(0deg) scaleY(1); }
+  100% { transform: rotate(28deg) scaleY(0.48); }
+}
+
+@keyframes flockWingFlapR {
+  0% { transform: rotate(0deg) scaleY(1); }
+  100% { transform: rotate(-28deg) scaleY(0.48); }
+}
+
+/* 斜越天际飞行轨迹 (自西南向东北翱翔) */
+@keyframes flyDiagonalV {
+  0% {
+    transform: translate3d(-20vw, 88vh, 0) rotate(-20deg);
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.28;
+  }
+  92% {
+    opacity: 0.28;
+  }
+  100% {
+    transform: translate3d(120vw, -18vh, 0) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flyDiagonalMid {
+  0% {
+    transform: translate3d(-18vw, 62vh, 0) rotate(-16deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.22;
+  }
+  90% {
+    opacity: 0.22;
+  }
+  100% {
+    transform: translate3d(120vw, -12vh, 0) rotate(-16deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flyDiagonalFar {
+  0% {
+    transform: translate3d(-25vw, 42vh, 0) rotate(-14deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.16;
+  }
+  90% {
+    opacity: 0.16;
+  }
+  100% {
+    transform: translate3d(120vw, -8vh, 0) rotate(-14deg);
+    opacity: 0;
+  }
+}
